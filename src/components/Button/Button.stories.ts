@@ -1,25 +1,16 @@
-import type { Meta } from '@storybook/react-vite';
+import type { Meta, StoryObj } from "@storybook/react";
 import { Button } from "./Button";
-import type { StoryObj } from "@storybook/react";
-
-type Story = StoryObj<typeof meta>;
 
 const meta: Meta<typeof Button> = {
   title: "Components/Button",
   component: Button,
-  args: {
-    children: "Button",
-    variant: "primary",
-    size: "md",
-    isLoading: false,
-  },
   argTypes: {
     variant: {
-      control: "radio",
+      control: "select",
       options: ["primary", "secondary", "danger"],
     },
     size: {
-      control: "radio",
+      control: "select",
       options: ["sm", "md", "lg"],
     },
     isLoading: {
@@ -30,28 +21,13 @@ const meta: Meta<typeof Button> = {
 
 export default meta;
 
-export const Primary: Story = {
+type Story = StoryObj<typeof Button>;
+
+export const Playground: Story = {
   args: {
+    children: "Button",
     variant: "primary",
+    size: "md",
+    isLoading: false,
   },
 };
-
-export const Loading: Story = {
-  args: {
-    children: "Loading",
-    isLoading: true,
-  },
-};
-
-export const Secondary: Story = {
-  args: {
-    variant: "secondary",
-  },
-};
-
-export const Danger: Story = {
-  args: {
-    variant: "danger",
-  },
-};
-
