@@ -7,6 +7,9 @@
   --color-secondary: #64748b;
   --color-danger: #dc2626;
 
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #0f172a;
+
   --color-bg: #ffffff;
   --color-fg: #0f172a;
 
@@ -18,4 +21,14 @@
 [data-theme="dark"] {
   --color-bg: #020617;
   --color-fg: #f8fafc;
+
+  --color-text-primary: #020617;
+  --color-text-secondary: #f8fafc;
+
+}
+
+html,
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
 }

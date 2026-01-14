@@ -9,6 +9,8 @@ export default {
         danger: "var(--color-danger)",
         background: "var(--color-bg)",
         foreground: "var(--color-fg)",
+        textPrimary: "var(--color-text-primary)",
+        textSecondary: "var(--color-text-secondary)",
       },
       borderRadius: {
         sm: "var(--radius-sm)",
