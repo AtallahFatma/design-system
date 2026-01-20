@@ -1,8 +1,8 @@
-import { forwardRef, type InputHTMLAttributes } from "react";
+import { forwardRef, type SelectHTMLAttributes } from "react";
 import { clsx } from "clsx";
 import type { SelectInputSize, SelectOption } from "./Select.types";
 
-type SelectProps = InputHTMLAttributes<HTMLSelectElement> & {
+type SelectProps = SelectHTMLAttributes<HTMLSelectElement> & {
   size?: SelectInputSize;
   error?: boolean;
   options: SelectOption[];
