@@ -1,0 +1,36 @@
+import { Meta, Canvas, Story } from "@storybook/addon-docs/blocks";
+import * as TextareaStories from "./Textarea.stories";
+
+<Meta of={TextareaStories} />
+
+# Textarea
+
+Multi-line text input for longer content.
+
+## When to use
+- Messages  
+- Descriptions  
+- Comments  
+- Notes  
+
+## Basic usage
+
+```tsx
+<Textarea placeholder="Write your message…" />
+```
+
+## With FormField
+
+Always wrap Textarea in FormField for:
+- Label
+- Helper text
+- Error message
+- Accessibility
+
+```tsx
+<FormField label="Message" helperText="Max 500 characters">
+  <Textarea />
+</FormField>
+```
+
+<Canvas> <Story of={TextareaStories.Playground} /> </Canvas>

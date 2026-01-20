@@ -1,0 +1,29 @@
+import { Meta, Canvas, Story } from "@storybook/addon-docs/blocks";
+import * as SelectStories from "./Select.stories";
+
+<Meta of={SelectStories} />
+
+# Select
+
+Dropdown for choosing one option from a list.
+
+## When to use
+- Country
+- Status
+- Category
+- Role
+
+## Basic usage
+
+```tsx
+<Select options={[{ label: "France", value: "fr" }]} />
+````
+
+## With FormFields
+```tsx
+<FormField label="Country" helperText="Choose your country">
+  <Select options={[...]} />
+</FormField>
+```
+
+<Canvas> <Story of={SelectStories.Playground} /> </Canvas>
