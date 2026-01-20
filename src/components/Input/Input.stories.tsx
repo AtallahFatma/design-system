@@ -5,19 +5,17 @@ const meta: Meta<typeof Input> = {
   title: "Components/Input",
   component: Input,
   args: {
-    label: "Email",
-    placeholder: "Enter your email",
+    label: "Input Label",
+    placeholder: "Type here...",
+  },
+  argTypes: {
+    size: { control: "radio", options: ["sm", "md", "lg"] },
+    error: { control: "boolean" },
+    disabled: { control: "boolean" },
   },
 };
 
 export default meta;
-
 type Story = StoryObj<typeof Input>;
 
-export const Default: Story = {};
-
-export const Error: Story = {
-  args: {
-    error: "Invalid email address",
-  },
-};
+export const Playground: Story = {};
