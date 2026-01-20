@@ -12,7 +12,7 @@ type FormControlProps = {
 type FormControlElement = ReactElement<FormControlProps>;
 
 type FormFieldProps = {
-  label?: string;
+  label: string;
   helperText?: string;
   error?: string;
   children: FormControlElement;
@@ -34,7 +34,7 @@ export function FormField({ label, helperText, error, children }: FormFieldProps
 
     
   return (
-    <div className="flex flex-col gap-1">
+    <div className="flex flex-col gap-1 items-start">
       {label && (
         <label htmlFor={id} className="text-sm font-medium">
           {label}

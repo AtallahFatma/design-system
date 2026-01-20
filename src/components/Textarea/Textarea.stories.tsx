@@ -1,11 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Input } from "./Input";
+import { Textarea } from "./Textarea";
 
-const meta: Meta<typeof Input> = {
-  title: "Components/Input",
-  component: Input,
+const meta: Meta<typeof Textarea> = {
+  title: "Components/Textarea",
+  component: Textarea,
   args: {
     placeholder: "Type here...",
+    size: "md",
   },
   argTypes: {
     size: { control: "radio", options: ["sm", "md", "lg"] },
@@ -15,6 +16,6 @@ const meta: Meta<typeof Input> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof Input>;
+type Story = StoryObj<typeof Textarea>;
 
 export const Playground: Story = {};
