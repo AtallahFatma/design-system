@@ -28,11 +28,12 @@ A production-grade design system built with React, TypeScript, Tailwind CSS, and
 - Design tokens aligned with Figma
 
 ## 🚀 Getting Started
+
 ```bash
 npm install
 npm run dev
 npm run storybook
-
+```
 
 ## 📝 Forms
 
