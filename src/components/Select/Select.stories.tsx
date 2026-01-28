@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import  { Select } from "./Select";
+import { FormField } from "../FormField/FormField";
 
 const meta: Meta<typeof Select> = {
   title: "Components/Select",
@@ -22,3 +23,11 @@ export default meta;
 type Story = StoryObj<typeof Select>;
 
 export const Playground: Story = {};
+
+export const WithFormField: Story = {
+  render: () => (
+    <FormField label="Select your option" >
+      <Select options={[{ label: "France", value: "fr" }, { label: "USA", value: "us" }]} />
+    </FormField>
+  ),
+};

@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Textarea } from "./Textarea";
+import { FormField } from "../FormField/FormField";
 
 const meta: Meta<typeof Textarea> = {
   title: "Components/Textarea",
@@ -18,4 +19,16 @@ const meta: Meta<typeof Textarea> = {
 export default meta;
 type Story = StoryObj<typeof Textarea>;
 
-export const Playground: Story = {};
+export const Playground: Story = {
+  args: {
+    placeholder: "Write your message…",
+  },
+};
+
+export const WithFormField: Story = {
+  render: () => (
+    <FormField label="Message" helperText="Max 500 characters">
+      <Textarea />
+    </FormField>
+  ),
+};

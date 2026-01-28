@@ -1,6 +1,4 @@
-import {  cloneElement, isValidElement, type ReactElement } from "react";
-
-
+import { cloneElement, isValidElement, type ReactElement } from "react";
 
 type FormControlProps = {
   id?: string;
@@ -18,21 +16,28 @@ type FormFieldProps = {
   children: FormControlElement;
 };
 
-export function FormField({ label, helperText, error, children }: FormFieldProps) {
+export function FormField({
+  label,
+  helperText,
+  error,
+  children,
+}: FormFieldProps) {
   const id = crypto.randomUUID();
-  const describedBy = error ? `${id}-error` : helperText ? `${id}-help` : undefined;
+  const describedBy = error
+    ? `${id}-error`
+    : helperText
+      ? `${id}-help`
+      : undefined;
 
-  const child =
-    isValidElement(children)
-      ? cloneElement(children, {
-    id,
-    error: Boolean(error),
-    "aria-invalid": Boolean(error),
-    "aria-describedby": describedBy,
-  })
-      : children;
+  const child = isValidElement(children)
+    ? cloneElement(children, {
+        id,
+        error: Boolean(error),
+        "aria-invalid": Boolean(error),
+        "aria-describedby": describedBy,
+      })
+    : children;
 
-    
   return (
     <div className="flex flex-col gap-1 items-start">
       {label && (

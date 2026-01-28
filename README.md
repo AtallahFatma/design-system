@@ -2,6 +2,11 @@
 
 A production-grade design system built with React, TypeScript, Tailwind CSS, and Storybook.
 
+### Storybook setup
+This project uses Storybook v10 core APIs without addon-essentials to avoid
+ecosystem version conflicts. The setup is intentionally minimal and
+compatible with future addon upgrades.
+
 ## ✨ Features
 - Token-based design (CSS variables)
 - Light & dark mode

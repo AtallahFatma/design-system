@@ -6,18 +6,32 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: ButtonVariant;
   size?: ButtonSize;
   isLoading?: boolean;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  disabled?: boolean;
 };
 
 export function Button({
   variant = "primary",
   size = "md",
   isLoading,
+  disabled = false,
   className,
+  onClick,
   children,
   ...props
 }: ButtonProps) {
+
+  const isDisabled = disabled || isLoading;
+
+  const handleClick: React.MouseEventHandler<HTMLButtonElement> = (e) => {
+      if (!isDisabled && onClick) {
+        onClick(e);
+      }
+    };
+
   return (
     <button
+      onClick={handleClick}
       className={clsx(
         "inline-flex items-center justify-center font-medium rounded-md transition focus:outline-none focus:ring-2 focus:ring-offset-2",
         {

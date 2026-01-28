@@ -1,4 +1,4 @@
-import { Meta, Canvas, Story } from "@storybook/addon-docs/blocks";
+import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks';
 import * as TextareaStories from "./Textarea.stories";
 
 <Meta of={TextareaStories} />
@@ -32,5 +32,11 @@ Always wrap Textarea in FormField for:
   <Textarea />
 </FormField>
 ```
+## Accessibility
+  - Must be wrapped in `FormField`
+  - Uses `aria-invalid` on error
+  - Uses `aria-describedby`
 
-<Canvas> <Story of={TextareaStories.Playground} /> </Canvas>
+<Canvas>
+  <Story of={TextareaStories.Playground} />
+</Canvas>

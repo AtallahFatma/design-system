@@ -1,0 +1,96 @@
+import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks';
+import * as LoginForm from "./LoginForm.stories";
+
+<Meta
+  title="Patterns/Forms"
+  of={LoginForm}
+/>
+
+# Forms
+
+Forms in this design system are built from **simple, accessible primitives**
+that compose together into predictable, scalable patterns.
+
+---
+
+## Philosophy
+
+- **Form controls are dumb**
+- **FormField owns accessibility**
+- Labels, helper text, and errors live in one place
+- Composition is preferred over configuration
+
+This keeps components:
+- Reusable
+- Testable
+- Accessible by default
+
+---
+
+## Core building blocks
+
+- `FormField` — label, helper text, error, accessibility
+- `Input` — single-line text
+- `Textarea` — multi-line text
+- `Select` — single choice from a list
+- `Button` — form actions
+
+---
+
+## Rules to follow
+
+- Never use `Input`, `Textarea`, or `Select` without `FormField`
+- Errors are passed via `FormField.error`
+- Accessible names are always visible (no `aria-label` only)
+
+---
+
+## Login form
+
+Simple authentication form with required fields.
+
+<Canvas>
+  <Story of={LoginForm} />
+</Canvas>
+
+```tsx
+<form>
+  <FormField label="Email">
+    <Input type="email" />
+  </FormField>
+
+  <FormField label="Password">
+    <Input type="password" />
+  </FormField>
+
+  <Button type="submit">Login</Button>
+</form>
+```
+
+## Error handling
+
+Errors are always expressed at the `FormField` level.
+
+- Inputs receive aria-invalid
+- Error messages are linked via aria-describedby
+- Screen readers announce errors correctly
+
+```tsx
+
+<FormField label="Email" error="Invalid email">
+  <Input type="email" />
+</FormField>
+```
+
+
+## Accessibility
+
+All forms follow these rules:
+
+- Visible labels using `<label htmlFor/>`
+- Deterministic id wiring
+- aria-invalid for error states
+- aria-describedby for helper and error text
+- Keyboard navigation supported by default
+
+Accessibility is not optional.

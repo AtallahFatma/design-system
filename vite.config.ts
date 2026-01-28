@@ -34,5 +34,8 @@ export default defineConfig({
         setupFiles: ['.storybook/vitest.setup.ts']
       }
     }]
+  },
+  server: {
+    hmr: { overlay: false }
   }
 });
