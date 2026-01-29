@@ -1,6 +1,14 @@
 # React Design System
 
-A production-grade design system built with React, TypeScript, Tailwind CSS, and Storybook.
+A design system built with React, TypeScript, Tailwind CSS, and Storybook.
+
+## 🔗 Live Design System
+
+The design system is publicly accessible via Storybook:
+
+👉 [https://my-design-system.chromatic.com](https://697b5aa76a6137e008baafce-cvxkphbqrf.chromatic.com/?path=/story/patterns-forms-login--default)
+
+No local setup required.
 
 ### Storybook setup
 This project uses Storybook v10 core APIs without addon-essentials to avoid
@@ -10,10 +18,8 @@ compatible with future addon upgrades.
 ## ✨ Features
 - Token-based design (CSS variables)
 - Light & dark mode
-- Accessible components (WCAG basics)
-- Typed APIs with TypeScript
+- Accessible components 
 - Storybook documentation
-- Scalable architecture
 
 ## 🧩 Components
 - Button (variants, sizes, loading)
@@ -28,9 +34,6 @@ compatible with future addon upgrades.
 - Tailwind CSS v3
 - Storybook
 
-## 📘 Documentation
-- Live Storybook: [link]
-- Design tokens aligned with Figma
 
 ## 🚀 Getting Started
 
@@ -67,3 +70,4 @@ This design system provides accessible, composable form primitives.
 >
   <Input placeholder="email@example.com" />
 </FormField>
+```
