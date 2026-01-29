@@ -1,0 +1,54 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Accessibility" />
+
+# Accessibility
+
+Accessibility is a **first-class concern** in this design system.
+
+It is not optional, not decorative, and not delegated to consumers.
+
+---
+
+## Principles
+
+- Semantic HTML by default
+- Visible labels over aria-only labels
+- Errors are announced to assistive technologies
+- Keyboard navigation is always supported
+
+---
+
+## Form accessibility
+
+All form controls follow these rules:
+
+- Each control has a visible `<label>`
+- Labels are wired using `htmlFor` and `id`
+- Errors set `aria-invalid="true"`
+- Helper and error messages use `aria-describedby`
+
+### Example
+
+```tsx
+<FormField label="Email" error="Invalid email">
+  <Input type="email" />
+</FormField>
+```
+
+This results in:
+
+- Screen readers announcing the label
+- Error message being read automatically
+- Proper focus handling
+
+## Keyboard navigation
+
+- All interactive elements are keyboard reachable
+- Focus states are visible
+- No keyboard traps
+
+Tested using:
+
+- Tab / Shift+Tab
+- Enter / Space
