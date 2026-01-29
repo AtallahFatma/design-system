@@ -6,7 +6,7 @@ A design system built with React, TypeScript, Tailwind CSS, and Storybook.
 
 The design system is publicly accessible via Storybook:
 
-👉 [https://my-design-system.chromatic.com](https://697b5aa76a6137e008baafce-cvxkphbqrf.chromatic.com/?path=/story/patterns-forms-login--default)
+👉 [https://my-design-system.chromatic.com](https://697b5aa76a6137e008baafce-cvxkphbqrf.chromatic.com/?path=/docs/components-select--docs)
 
 No local setup required.
 
