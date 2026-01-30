@@ -46,6 +46,7 @@ export default defineConfig({
     rollupOptions: {
       external: ["react", "react-dom"],
     },
+    cssCodeSplit: true
   },
   server: {
     hmr: { overlay: false }
