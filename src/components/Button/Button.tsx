@@ -41,7 +41,7 @@ export function Button({
           "px-3 py-1.5 text-sm": size === "sm",
           "px-4 py-2": size === "md",
           "px-6 py-3 text-lg": size === "lg",
-          "opacity-50 pointer-events-none": isLoading,
+          "opacity-50 pointer-events-none": isLoading || disabled,
         },
         className
       )}
