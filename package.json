@@ -12,7 +12,7 @@
       "require": "./dist/index.cjs",
       "types": "./dist/index.d.ts"
     },
-    "./style.css": "./dist/style.css"
+    "./index.css": "./dist/index.css"
   },
   "files": ["dist"],
   "scripts": {
@@ -23,7 +23,7 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "prepare": "husky",
+    "prepare": "npm run build",
     "storybook:publish": "chromatic --project-token=$CHROMATIC_PROJECT_TOKEN"
   },
   "lint-staged": {
