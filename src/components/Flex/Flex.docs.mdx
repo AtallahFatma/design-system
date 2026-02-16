@@ -1,0 +1,23 @@
+import { Meta, Canvas, Story } from "@storybook/addon-docs/blocks";
+import { Flex } from "./Flex";
+import * as FlexStories from "./Flex.stories";
+
+<Meta of={FlexStories} />
+
+# Flex
+
+A layout component that renders a `div` with flexbox styles.
+
+## Usage
+
+````tsx
+import { Flex } from "./Flex";
+
+<Flex gap={8} align="center" justify="between">
+  <div>Left</div>
+  <div>Right</div>
+</Flex>
+````
+
+<Canvas> <Story of={FlexStories.Playground} /> </Canvas>
+
